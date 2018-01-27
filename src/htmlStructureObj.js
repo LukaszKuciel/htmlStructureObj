@@ -6,7 +6,7 @@ let htmlRecursion = (nodes, parent) => {
   let structure = {};
   nodes
     .filter(n => n.parentNode === parent)
-    .map((n,i) => structure[i+'.'+n.localName] = htmlRecursion(htmlDOM, n));
+    .map((n,i) => structure[i+1+'.'+n.localName] = htmlRecursion(htmlDOM, n));
   return structure;
 }
 
