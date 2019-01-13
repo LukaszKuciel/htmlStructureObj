@@ -1,6 +1,5 @@
 //creates array of all elements in document//
-let htmlDOM = $(document).find('*').toArray();
-
+let htmlDOM = [...document.querySelectorAll('*')];
 
 let htmlRecursion = (nodes, parent) => {
   let structure = {};
